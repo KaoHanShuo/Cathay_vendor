@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 # from .Module import *
 
-class Base:
+class Base(object):
     @pytest.fixture
     def driver(self):
         """啟動瀏覽器，並設定為手機版模擬"""
@@ -21,13 +21,15 @@ class Base:
         # mobile_emulation = {
         #     # 
         # }
-        
+
         option.add_experimental_option("mobileEmulation", mobile_emulation)
         # 啟動 Chrome 瀏覽器
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=option)
         driver.maximize_window()  # 最大化視窗
         driver.switch_to.window(driver.current_window_handle)  # 切換到當前視窗
-        InIDiver(driver)  # 自定義操作，根據你的需求定義
-        GoToWindow(env('url'))  # 自定義方法，用於轉到特定頁面
-        yield   # 測試結束後執行 driver.quit()
+        yield   
         driver.quit()  # 關閉瀏覽器
+
+
+class action(object):
+    pass
