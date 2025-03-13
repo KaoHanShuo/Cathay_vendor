@@ -7,8 +7,11 @@ class Case1:
     """開啟網頁 > 截圖"""
 
     def __init__(self):
-        driver = Driver()
-        driver.get_url(url)
+        self.driver = Driver()
+        self.driver.get_url(url)
+
+    def exec_case(self):
+        pass
         # action = Action(driver)
         # action.get_url(url)
 
