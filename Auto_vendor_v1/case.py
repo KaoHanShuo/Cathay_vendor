@@ -1,4 +1,6 @@
 from driver import Driver
+from element import *
+from Unit import *
 from parameter import *
 import time
 
@@ -6,14 +8,13 @@ import time
 class Case1:
     """開啟網頁 > 截圖"""
 
-    def __init__(self):
+    def __init__(self, unit: Unit):
+        self.unit = unit
         self.driver = Driver()
         self.driver.get_url(url)
 
     def exec_case(self):
-        pass
-        # action = Action(driver)
-        # action.get_url(url)
+        self.unit.unit_homePage.click_hamburger_menu()
 
 
 class Case2(object):

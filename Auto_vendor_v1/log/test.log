@@ -1,0 +1,6 @@
+2025-03-16 23:57:31,893 - root - INFO - driver 啟動成功
+2025-03-17 02:49:56,302 - root - INFO - driver 啟動成功
+2025-03-17 02:50:42,329 - root - INFO - driver 啟動成功
+2025-03-17 02:50:46,018 - root - INFO - driver 啟動成功
+2025-03-17 02:50:51,706 - root - ERROR - 等待 Element://a[@class='cubre-a-burger']超時
+2025-03-17 02:50:51,706 - root - ERROR - 找不到

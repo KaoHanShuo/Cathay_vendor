@@ -13,7 +13,7 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import TimeoutException
 from webdriver_manager.chrome import ChromeDriverManager
 
- 
+
 class Driver(webdriver.Remote):
 
     @property
@@ -41,38 +41,51 @@ class Driver(webdriver.Remote):
 
         option.add_experimental_option("mobileEmulation", mobile_emulation)
         option.add_argument("--window-size=390,844")  # 瀏覽器大小
-        # 啟動 Chrome 瀏覽器
+        # 啟動 Chrome
         self.__driver = webdriver.Chrome(
             service=ChromeService(ChromeDriverManager().install()), options=option
         )
-        self.__driver.switch_to.window(
-            self.__driver.current_window_handle
-        )  # 切換到當前視窗
-        print(os.path.dirname(__file__))
+        self.__driver.switch_to.window(self.__driver.current_window_handle)
+
+        # 設定日誌
         logging.config.fileConfig(os.path.dirname(__file__) + "/logging.conf")
         self.logger = logging.getLogger()
-        self.logger.warning("234")
-        logging.warning("driver 啟動成功2")
+        self.logger.info("driver 啟動成功")
 
     def get_url(self, url: str):
+        """開啟網頁"""
         self.driver.get(url)
 
     def wait_until_element(self, param, waitTime: float = 5) -> bool:
+        """等待元素出現"""
         try:
-            WebDriverWait(self.driver, waitTime).until(EC.presence_of_element_located((By.XPATH, param))) 
+            WebDriverWait(self.driver, waitTime).until(
+                EC.presence_of_element_located((By.XPATH, param))
+            )
             return True
         except TimeoutException:
             if __debug__:
-                logging.ERROR(f"等待 Element:{param}超時")
+                self.logger.error(f"等待 Element:{param}超時")
             return False
         except Exception as e:
             if __debug__:
-                logging.ERROR(f"Element異常：\r\n{e}")
+                self.logger.error(f"Element異常：\r\n{e}")
             return False
 
     def get_ele_by_xpath(self, param: str) -> WebElement:
+        """根據xpath取得元素"""
         if self.wait_until_element(param):
             return self.driver.find_element(By.XPATH, param)
         else:
-            logging.ERROR(f"找不到")
-            return None        
+            self.logger.error(f"找不到")
+            return None
+
+    def element_click(self, element: WebElement):
+        """點擊元素"""
+        element.click()
+        self.logger.info(f"點擊元素:{element.text}")
+
+    def screen_shot(self, path: str):
+        """截圖"""
+        self.driver.save_screenshot(path)
+        self.logger.info("截圖成功")
