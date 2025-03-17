@@ -15,3 +15,155 @@
 2025-03-17 18:26:35,744 - root - INFO - driver 啟動成功
 2025-03-17 18:26:43,483 - root - INFO - 點擊元素:<selenium.webdriver.remote.webelement.WebElement (session="44ac783eb3aa9d04c671e736881163e5", element="f.C4599B2C4CCD9DE043B3BBABD5CB25CD.d.21C96035BB09F7446566BCEA28E2D48E.e.52")>
 2025-03-17 18:26:46,487 - root - INFO - 點擊左上功能列
+2025-03-17 22:30:48,823 - root - INFO - driver 啟動成功
+2025-03-17 22:30:51,865 - root - INFO - 點擊左上功能列
+2025-03-17 22:34:50,146 - root - INFO - driver 啟動成功
+2025-03-17 22:34:52,847 - root - INFO - None
+2025-03-17 22:36:12,254 - root - INFO - driver 啟動成功
+2025-03-17 22:36:14,772 - root - INFO - 點擊左上功能列
+2025-03-17 22:53:03,308 - root - INFO - driver 啟動成功
+2025-03-17 22:53:05,925 - root - INFO - 點擊左上功能列
+2025-03-17 22:53:11,000 - root - ERROR - 等待 Element://div[@class='cubre-o-menu']//div[@class='cubre-o-menu__item' and contains(text(), '產品介紹')]超時
+2025-03-17 22:53:11,001 - root - ERROR - 找不到該元素
+2025-03-18 00:31:46,717 - root - INFO - driver 啟動成功
+2025-03-18 00:31:49,042 - root - INFO - 截圖成功
+2025-03-18 00:31:49,042 - root - INFO - 截圖- {path}
+2025-03-18 00:32:42,744 - root - INFO - driver 啟動成功
+2025-03-18 00:32:44,963 - root - INFO - 截圖成功
+2025-03-18 00:32:44,963 - root - INFO - 截圖C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-18 00:33:09,496 - root - INFO - driver 啟動成功
+2025-03-18 00:33:11,665 - root - INFO - 截圖成功
+2025-03-18 00:33:11,666 - root - INFO - 截圖- C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-18 00:35:02,849 - root - INFO - driver 啟動成功
+2025-03-18 00:36:36,062 - root - INFO - driver 啟動成功
+2025-03-18 00:38:19,172 - root - INFO - driver 啟動成功
+2025-03-18 00:40:04,894 - root - INFO - driver 啟動成功
+2025-03-18 00:40:06,763 - root - ERROR - Element有其他異常：
+'Driver' object has no attribute 'locator_converter'
+2025-03-18 00:40:06,763 - root - ERROR - 找不到該 None 元素的子元素 //div[@class='cubre-o-quickLink__item']
+2025-03-18 00:40:51,831 - root - INFO - driver 啟動成功
+2025-03-18 00:40:54,467 - root - ERROR - Element有其他異常：
+'Driver' object has no attribute 'locator_converter'
+2025-03-18 00:40:54,468 - root - ERROR - 找不到該 None 元素的子元素 //div[@class='cubre-o-quickLink__item']
+2025-03-18 00:40:54,468 - root - INFO - 取得首頁 - 開戶
+2025-03-18 00:40:54,898 - root - INFO - 截圖成功
+2025-03-18 00:40:54,899 - root - INFO - 截圖 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-18 01:09:12,724 - root - INFO - driver 啟動成功
+2025-03-18 01:09:15,220 - root - INFO - 截圖成功
+2025-03-18 01:09:15,221 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-18 01:09:18,621 - root - INFO - driver 啟動成功
+2025-03-18 01:10:37,990 - root - INFO - driver 啟動成功
+2025-03-18 01:10:40,202 - root - INFO - 截圖成功
+2025-03-18 01:10:40,203 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-18 01:12:22,387 - root - INFO - driver 啟動成功
+2025-03-18 01:12:24,658 - root - INFO - 截圖成功
+2025-03-18 01:12:24,658 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-18 01:13:28,862 - root - INFO - driver 啟動成功
+2025-03-18 01:13:31,580 - root - INFO - 截圖成功
+2025-03-18 01:13:31,580 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-18 01:13:35,066 - root - INFO - driver 啟動成功
+2025-03-18 01:13:37,697 - root - INFO - 點擊左上功能列
+2025-03-18 01:13:38,357 - root - INFO - 點擊產品介紹
+2025-03-18 01:14:10,844 - root - INFO - driver 啟動成功
+2025-03-18 01:14:14,084 - root - INFO - 截圖成功
+2025-03-18 01:14:14,084 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-18 01:14:17,358 - root - INFO - driver 啟動成功
+2025-03-18 01:14:19,844 - root - INFO - 點擊左上功能列
+2025-03-18 01:14:20,483 - root - INFO - 點擊產品介紹
+2025-03-18 01:14:25,547 - root - ERROR - 等待 Element://div[@class='cubre-o-menuLinkList__item is-L2open']//div[@class='cubre-o-menuLinkList__content']超時
+2025-03-18 01:14:25,547 - root - ERROR - 找不到該元素
+2025-03-18 01:15:15,875 - root - INFO - driver 啟動成功
+2025-03-18 01:15:18,480 - root - INFO - 點擊左上功能列
+2025-03-18 01:15:19,140 - root - INFO - 點擊產品介紹
+2025-03-18 01:15:24,206 - root - ERROR - 等待 Element://div[@class='cubre-o-menuLinkList__item is-L2open']//div[@class='cubre-o-menuLinkList__content']超時
+2025-03-18 01:15:24,208 - root - ERROR - 找不到該元素
+2025-03-18 01:15:29,272 - root - ERROR - 等待 Element://div[@class='cubre-o-menuLinkList__item is-L2open']//div[@class='cubre-o-menuLinkList__content']超時
+2025-03-18 01:15:29,272 - root - ERROR - 找不到該元素
+2025-03-18 02:11:23,881 - root - INFO - driver 啟動成功
+2025-03-18 02:11:27,337 - root - INFO - 點擊左上功能列
+2025-03-18 02:11:27,989 - root - INFO - 點擊產品介紹
+2025-03-18 02:11:28,106 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:11:28,106 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:16:08,451 - root - INFO - driver 啟動成功
+2025-03-18 02:16:13,109 - root - INFO - 點擊左上功能列
+2025-03-18 02:16:13,770 - root - INFO - 點擊產品介紹
+2025-03-18 02:16:13,886 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:16:13,887 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:17:03,034 - root - INFO - driver 啟動成功
+2025-03-18 02:17:05,442 - root - INFO - 點擊左上功能列
+2025-03-18 02:17:06,102 - root - INFO - 點擊產品介紹
+2025-03-18 02:17:06,730 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:17:06,878 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:17:06,878 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:17:43,734 - root - INFO - driver 啟動成功
+2025-03-18 02:17:46,689 - root - INFO - 點擊左上功能列
+2025-03-18 02:17:47,330 - root - INFO - 點擊產品介紹
+2025-03-18 02:17:47,966 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:17:48,098 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:17:48,098 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:18:15,924 - root - INFO - driver 啟動成功
+2025-03-18 02:18:18,441 - root - INFO - 點擊左上功能列
+2025-03-18 02:18:19,132 - root - INFO - 點擊產品介紹
+2025-03-18 02:18:19,765 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:18:19,913 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:18:19,913 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:21:20,426 - root - INFO - driver 啟動成功
+2025-03-18 02:21:22,836 - root - INFO - 點擊左上功能列
+2025-03-18 02:21:23,500 - root - INFO - 點擊產品介紹
+2025-03-18 02:21:24,127 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:21:24,290 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:21:24,290 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:33:14,504 - root - INFO - driver 啟動成功
+2025-03-18 02:33:18,142 - root - INFO - 點擊左上功能列
+2025-03-18 02:33:18,802 - root - INFO - 點擊產品介紹
+2025-03-18 02:33:19,431 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:33:19,581 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:33:19,581 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:33:29,801 - root - INFO - driver 啟動成功
+2025-03-18 02:33:32,786 - root - INFO - 點擊左上功能列
+2025-03-18 02:33:33,437 - root - INFO - 點擊產品介紹
+2025-03-18 02:33:34,063 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:33:34,215 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:33:34,215 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:37:51,877 - root - INFO - driver 啟動成功
+2025-03-18 02:37:54,351 - root - INFO - 點擊左上功能列
+2025-03-18 02:37:54,994 - root - INFO - 點擊產品介紹
+2025-03-18 02:37:55,626 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:37:55,779 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:37:55,780 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:37:55,853 - root - INFO - 信用卡的數量為156
+2025-03-18 02:39:06,388 - root - INFO - driver 啟動成功
+2025-03-18 02:39:08,831 - root - INFO - 點擊左上功能列
+2025-03-18 02:39:09,491 - root - INFO - 點擊產品介紹
+2025-03-18 02:39:10,121 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:39:10,264 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:39:10,264 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:39:15,339 - root - ERROR - 等待 <selenium.webdriver.remote.webelement.WebElement (session="43bfe29bc89a6757f5eda150c1ffd80e", element="f.29DC966FC12B50ED55135DB90DF7542F.d.94782C2070B0A7EB185387B27513E934.e.73")> - /a超時
+2025-03-18 02:39:20,411 - root - ERROR - 等待 <selenium.webdriver.remote.webelement.WebElement (session="43bfe29bc89a6757f5eda150c1ffd80e", element="f.29DC966FC12B50ED55135DB90DF7542F.d.94782C2070B0A7EB185387B27513E934.e.73")> - /a超時
+2025-03-18 02:40:51,468 - root - INFO - driver 啟動成功
+2025-03-18 02:40:54,015 - root - INFO - 點擊左上功能列
+2025-03-18 02:42:01,844 - root - INFO - driver 啟動成功
+2025-03-18 02:42:04,467 - root - INFO - 點擊左上功能列
+2025-03-18 02:43:25,942 - root - INFO - driver 啟動成功
+2025-03-18 02:43:28,498 - root - INFO - 點擊左上功能列
+2025-03-18 02:43:29,175 - root - INFO - 點擊產品介紹
+2025-03-18 02:44:34,911 - root - INFO - driver 啟動成功
+2025-03-18 02:44:37,825 - root - INFO - 點擊左上功能列
+2025-03-18 02:44:38,478 - root - INFO - 點擊產品介紹
+2025-03-18 02:47:22,472 - root - INFO - driver 啟動成功
+2025-03-18 02:47:24,713 - root - INFO - 點擊左上功能列
+2025-03-18 02:47:25,391 - root - INFO - 點擊產品介紹
+2025-03-18 02:49:05,025 - root - INFO - driver 啟動成功
+2025-03-18 02:49:07,928 - root - INFO - 點擊左上功能列
+2025-03-18 02:49:08,591 - root - INFO - 點擊產品介紹
+2025-03-18 02:49:09,252 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:49:09,890 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:49:10,024 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:49:10,058 - root - INFO - 信用卡的數量為156
+2025-03-18 02:50:08,891 - root - INFO - driver 啟動成功
+2025-03-18 02:50:12,680 - root - INFO - 點擊左上功能列
+2025-03-18 02:50:13,369 - root - INFO - 點擊產品介紹
+2025-03-18 02:50:14,012 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-18 02:50:14,654 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-18 02:50:14,804 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-18 02:50:14,833 - root - INFO - 信用卡的數量為9

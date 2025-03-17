@@ -80,6 +80,18 @@ class Driver(webdriver.Remote):
             self.logger.error(f"找不到該元素")
             return None
 
+    def get_elements_by_xpath(self, element: WebElement, s_param: str) -> WebElement:
+        """根據xpath取得元素的子元素們"""
+        try:
+            e = self.driver if element == None else element
+            WebDriverWait(e, 5).until(
+                EC.presence_of_element_located((By.XPATH, s_param))
+            )
+            return e.find_elements(By.XPATH, s_param)
+        except TimeoutError:
+            self.logger.error(f"找不到該 {element} 元素的子元素 {s_param}")
+            return None
+
     def element_click(self, element: WebElement):
         """點擊元素"""
         element.click()
