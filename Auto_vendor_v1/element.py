@@ -8,7 +8,7 @@ class HomePage(object):
     @property
     def hamburger_menu(self):
         """左上功能列"""
-        return self.driver.get_ele_by_xpath("//a[@class='cubre-a-burger']")
+        return self.driver.get_ele_by_xpath("//div[@class='cubre-o-header__burger']")
 
     @property
     def prod_introduce(self):

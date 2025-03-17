@@ -4,3 +4,14 @@
 2025-03-17 02:50:46,018 - root - INFO - driver 啟動成功
 2025-03-17 02:50:51,706 - root - ERROR - 等待 Element://a[@class='cubre-a-burger']超時
 2025-03-17 02:50:51,706 - root - ERROR - 找不到
+2025-03-17 18:11:33,117 - root - INFO - driver 啟動成功
+2025-03-17 18:11:48,760 - root - INFO - driver 啟動成功
+2025-03-17 18:11:55,112 - root - ERROR - 等待 Element://a[@class='cubre-a-burger']超時
+2025-03-17 18:11:55,116 - root - ERROR - 找不到
+2025-03-17 18:22:09,700 - root - INFO - driver 啟動成功
+2025-03-17 18:22:18,192 - root - INFO - 點擊元素:
+2025-03-17 18:22:58,648 - root - INFO - driver 啟動成功
+2025-03-17 18:23:05,457 - root - INFO - 點擊元素:<selenium.webdriver.remote.webelement.WebElement (session="1a1050975a44e8f8a9bf0c0a8e6a4ac3", element="f.AEC02F0A69D2266A0CC9F5BD3268BAA8.d.3F4A1679060980B7A378285AAF587815.e.54")>
+2025-03-17 18:26:35,744 - root - INFO - driver 啟動成功
+2025-03-17 18:26:43,483 - root - INFO - 點擊元素:<selenium.webdriver.remote.webelement.WebElement (session="44ac783eb3aa9d04c671e736881163e5", element="f.C4599B2C4CCD9DE043B3BBABD5CB25CD.d.21C96035BB09F7446566BCEA28E2D48E.e.52")>
+2025-03-17 18:26:46,487 - root - INFO - 點擊左上功能列

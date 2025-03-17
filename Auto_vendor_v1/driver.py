@@ -69,7 +69,7 @@ class Driver(webdriver.Remote):
             return False
         except Exception as e:
             if __debug__:
-                self.logger.error(f"Element異常：\r\n{e}")
+                self.logger.error(f"Element有其他異常：\r\n{e}")
             return False
 
     def get_ele_by_xpath(self, param: str) -> WebElement:
@@ -77,13 +77,13 @@ class Driver(webdriver.Remote):
         if self.wait_until_element(param):
             return self.driver.find_element(By.XPATH, param)
         else:
-            self.logger.error(f"找不到")
+            self.logger.error(f"找不到該元素")
             return None
 
     def element_click(self, element: WebElement):
         """點擊元素"""
         element.click()
-        self.logger.info(f"點擊元素:{element.text}")
+        time.sleep(0.5)  # 等待元素反應
 
     def screen_shot(self, path: str):
         """截圖"""
