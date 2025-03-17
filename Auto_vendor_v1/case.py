@@ -39,9 +39,12 @@ class Case3(object):
 
     def __init__(self, unit: Unit):
         self.unit = unit
+        self.log = self.unit.driver.logger
 
     def exec_case(self):
-        pass
+        self.unit.unit_homePage.click_hamburger_menu()
+        self.unit.unit_sideMenuList.click_prod_introduce()
+        self.unit.unit_sideMenuList.click_prod_introduce_card()
 
 
 class AutoTest(object):
