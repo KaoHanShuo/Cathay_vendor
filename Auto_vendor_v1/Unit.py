@@ -73,15 +73,34 @@ class UnitSideMenuList(object):
         self.log.info(self.get_num_prod_introduce_card_list.__doc__)
         return len(list(self.element.prod_introduce_card_list_Child))
 
+class UnitCardIntroducePage(object):
+    """卡片介紹頁面"""
+    def __init__(self, driver: Driver, element: CardIntroducePage):
+        self.driver = driver
+        self.element = element
+        self.log = self.driver.logger
 
+    def scroll_to_pagination(self):
+        """滾動到分頁物件"""
+        self.log.info(self.scroll_to_pagination.__doc__)
+        self.driver.scroll_to_element(self.element.swiper_pagination)
+
+    def count_pagination_bullets(self):
+        """計數分頁子項目"""
+        self.log.info(self.count_pagination_bullets.__doc__)
+        return len(self.element.pagination_bullets)
+    def click_pagination_bullets(self, num:int):
+        """點擊分頁子項目"""
+        self.log.info(self.click_pagination_bullets.__doc__)
+        self.driver.element_click(self.element.pagination_bullets[num])
 class Unit(object):
 
     def __init__(self, driver: Driver, element: Element):
         self.driver = driver
         self.__unit_action = UnitAction(driver)
-        self.__unit_homePage = UnitHomePage(driver, element.homePage)
-        self.__unit_sideMenuList = UnitSideMenuList(driver, element.sideMenuList)
-
+        self.__unit_homePage = UnitHomePage(driver, element.home_page)
+        self.__unit_sideMenuList = UnitSideMenuList(driver, element.side_menu_list)
+        self.__unit_cardIntroducePage = UnitCardIntroducePage(driver, element.card_introduce_page)
     @property
     def unit_action(self):
         return self.__unit_action
@@ -93,3 +112,8 @@ class Unit(object):
     @property
     def unit_sideMenuList(self):
         return self.__unit_sideMenuList
+    
+    @property
+    def unit_cardIntroducePage(self):
+        return self.__unit_cardIntroducePage
+

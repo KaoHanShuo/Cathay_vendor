@@ -46,7 +46,7 @@ class Driver(webdriver.Remote):
             service=ChromeService(ChromeDriverManager().install()), options=option
         )
         self.__driver.switch_to.window(self.__driver.current_window_handle)
-
+        self.actions = ActionChains(self.driver)
         # 設定日誌
         logging.config.fileConfig(os.path.dirname(__file__) + "/logging.conf")
         self.logger = logging.getLogger()
@@ -101,3 +101,7 @@ class Driver(webdriver.Remote):
         """截圖"""
         self.driver.save_screenshot(path)
         self.logger.info("截圖成功")
+
+    def scroll_to_element(self, element):
+        """滾動到指定元素"""
+        self.actions.move_to_element(element).perform()

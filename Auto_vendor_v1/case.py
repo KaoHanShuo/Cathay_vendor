@@ -45,20 +45,49 @@ class Case3(object):
         self.unit.unit_homePage.click_hamburger_menu()
         self.unit.unit_sideMenuList.click_prod_introduce()
         self.unit.unit_sideMenuList.click_prod_introduce_card()
-
-
+        self.unit.unit_sideMenuList.click_prod_introduce_card_card_intro()
+        self.unit.unit_cardIntroducePage.scroll_to_pagination()
+        for i in range(1,self.unit.unit_cardIntroducePage.count_pagination_bullets()):
+            self.unit.unit_homePage.screen_shot_home(pic_folder + f"/case3 - {i}.png")
+            self.unit.unit_cardIntroducePage.click_pagination_bullets(i)
+        time.sleep(3)
 class AutoTest(object):
     def __init__(self):
         self.driver = Driver()
 
     def exec_chrome_case1(self):
-        self.driver.get_url(url)
-        Case1(Unit(self.driver, Element(self.driver))).exec_case()
+        """執行cas1.
+        進入home page, 執行case1, 重新loading home page
+        """
+        try:
+            self.driver.get_url(url)
+            Case1(Unit(self.driver, Element(self.driver))).exec_case()
+        except:
+            pass
+        finally: 
+            self.driver.get_url(url)
 
     def exec_chrome_case2(self):
-        self.driver.get_url(url)
-        Case2(Unit(self.driver, Element(self.driver))).exec_case()
-
+        """執行cas2.
+        進入home page, 執行case2, 重新loading home page
+        """
+        try:
+            self.driver.get_url(url)
+            Case2(Unit(self.driver, Element(self.driver))).exec_case()
+        except:
+            pass
+        finally: 
+            self.driver.get_url(url)
     def exec_chrome_case3(self):
+        """執行cas3.
+        進入home page, 執行case3, 重新loading home page
+        """
         self.driver.get_url(url)
         Case3(Unit(self.driver, Element(self.driver))).exec_case()
+        # try:
+        #     self.driver.get_url(url)
+        #     Case3(Unit(self.driver, Element(self.driver))).exec_case()
+        # except:
+        #     pass
+        # finally: 
+        #     self.driver.get_url(url)
