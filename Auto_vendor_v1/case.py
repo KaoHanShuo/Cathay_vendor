@@ -1,8 +1,7 @@
 from driver import Driver
-from element import *
-from unit import *
+from element import Element
+from unit import Unit
 from parameter import *
-import time
 
 
 class Case1:
@@ -31,7 +30,7 @@ class Case2(object):
             pic_folder + "/case2.png"
         )
         card_num = self.unit.unit_sideMenuList.get_num_prod_introduce_card_list()
-        self.log.info(f"信用卡的數量為{card_num}")
+        self.log.info(f"信用卡的數量為 {card_num}")
 
 
 class Case3(object):
@@ -47,13 +46,20 @@ class Case3(object):
         self.unit.unit_sideMenuList.click_prod_introduce_card()
         self.unit.unit_sideMenuList.click_prod_introduce_card_card_intro()
         self.unit.unit_cardIntroducePage.scroll_to_pagination()
-        for i in range(1,self.unit.unit_cardIntroducePage.count_pagination_bullets()):
-            self.unit.unit_homePage.screen_shot_home(pic_folder + f"/case3 - {i}.png")
-            self.unit.unit_cardIntroducePage.click_pagination_bullets(i)
-        time.sleep(3)
+        for card in range(
+            0, self.unit.unit_cardIntroducePage.count_pagination_bullets()
+        ):
+            self.unit.unit_cardIntroducePage.click_pagination_bullets(card)
+            self.unit.unit_homePage.screen_shot_home(
+                pic_folder + f"/case3 - {card+1}.png"
+            )
+        self.log.info(f"所有(停發)信用卡數量為 {card+1}")
+
+
 class AutoTest(object):
-    def __init__(self):
-        self.driver = Driver()
+    def __init__(self, device=None, browser=None):
+        self.driver = Driver(device, browser)
+        self.log = self.driver.logger
 
     def exec_chrome_case1(self):
         """執行cas1.
@@ -62,10 +68,9 @@ class AutoTest(object):
         try:
             self.driver.get_url(url)
             Case1(Unit(self.driver, Element(self.driver))).exec_case()
+            self.log.info("Case1 結束")
         except:
-            pass
-        finally: 
-            self.driver.get_url(url)
+            self.log.warning("Case1 有異常問題")
 
     def exec_chrome_case2(self):
         """執行cas2.
@@ -74,20 +79,17 @@ class AutoTest(object):
         try:
             self.driver.get_url(url)
             Case2(Unit(self.driver, Element(self.driver))).exec_case()
+            self.log.info("Case2 結束")
         except:
-            pass
-        finally: 
-            self.driver.get_url(url)
+            self.log.warning("Case2 有異常問題")
+
     def exec_chrome_case3(self):
         """執行cas3.
         進入home page, 執行case3, 重新loading home page
         """
-        self.driver.get_url(url)
-        Case3(Unit(self.driver, Element(self.driver))).exec_case()
-        # try:
-        #     self.driver.get_url(url)
-        #     Case3(Unit(self.driver, Element(self.driver))).exec_case()
-        # except:
-        #     pass
-        # finally: 
-        #     self.driver.get_url(url)
+        try:
+            self.driver.get_url(url)
+            Case3(Unit(self.driver, Element(self.driver))).exec_case()
+            self.log.info("Case3 結束")
+        except:
+            self.log.warning("Case3 有異常問題")

@@ -5,17 +5,9 @@ class HomePage(object):
     def __init__(self, driver: Driver):
         self.driver = driver
 
-    # @property
-    # def homepage_open_account(self):
-    #     """首頁 - 開戶"""
-    #     return self.driver.get_elements_by_xpath(
-    #         "//div[@class='cubre-o-quickLink__item']"
-    #     )
-
     @property
     def hamburger_menu(self):
         """左上功能列"""
-
         return self.driver.get_ele_by_xpath("//div[@class='cubre-o-header__burger']")
 
 
@@ -52,16 +44,10 @@ class SideMenuList(object):
     @property
     def prod_introduce_card_card_intro(self):
         """信用卡 - 卡片介紹"""
-        return self.driver.get_elements_by_xpath(self.prod_introduce_card_list, ".//a")[0]
-    # @property
-    # def card_type(self):
-    #     """信用卡 - 信用卡介紹 - 信用卡類型清單"""
-    #     return self.driver.get_ele_by_xpath(self.card_type)
+        return self.driver.get_elements_by_xpath(self.prod_introduce_card_list, ".//a")[
+            0
+        ]
 
-    # @property
-    # def card_type_Child(self):
-    #     """信用卡 - 信用卡介紹 - 信用卡類型清單的子元素"""
-    #     return self.driver.get_ele_by_xpath(self.card_type_Child)
 
 class CardIntroducePage(object):
     def __init__(self, driver: Driver):
@@ -70,11 +56,17 @@ class CardIntroducePage(object):
     @property
     def swiper_pagination(self):
         """滑動分頁的物件"""
-        return self.driver.get_elements_by_xpath(None, "//div[@class='cubre-o-slide__page swiper-pagination-clickable swiper-pagination-bullets']")[4]
+        return self.driver.get_elements_by_xpath(
+            None,
+            "//div[@class='cubre-o-slide__page swiper-pagination-clickable swiper-pagination-bullets']",
+        )[4]
+
     @property
     def pagination_bullets(self):
         """分頁的子項目"""
         return self.driver.get_elements_by_xpath(self.swiper_pagination, ".//span")
+
+
 class Element(object):
     def __init__(self, driver: Driver):
         self.driver = driver

@@ -1,0 +1,57 @@
+2025-03-19 17:27:57,162 - root - INFO - driver 啟動成功
+2025-03-19 17:27:58,984 - root - INFO - 前往 https://www.cathaybk.com.tw/cathaybk/
+2025-03-19 17:27:58,984 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case1.png
+2025-03-19 17:27:59,376 - root - INFO - 截圖成功
+2025-03-19 17:27:59,377 - root - INFO - Case1 結束
+2025-03-19 17:28:04,787 - root - INFO - driver 啟動成功
+2025-03-19 17:28:06,450 - root - INFO - 前往 https://www.cathaybk.com.tw/cathaybk/
+2025-03-19 17:28:06,450 - root - INFO - 點擊左上功能列
+2025-03-19 17:28:07,144 - root - INFO - 點擊產品介紹
+2025-03-19 17:28:07,783 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-19 17:28:08,428 - root - INFO - 截圖產品介紹 - 信用卡清單 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case2.png
+2025-03-19 17:28:08,556 - root - INFO - 計數產品介紹 - 信用卡清單
+2025-03-19 17:28:08,586 - root - INFO - 信用卡的數量為 9
+2025-03-19 17:28:08,586 - root - INFO - Case2 結束
+2025-03-19 17:28:13,898 - root - INFO - driver 啟動成功
+2025-03-19 17:28:16,610 - root - INFO - 前往 https://www.cathaybk.com.tw/cathaybk/
+2025-03-19 17:28:16,611 - root - INFO - 點擊左上功能列
+2025-03-19 17:28:17,269 - root - INFO - 點擊產品介紹
+2025-03-19 17:28:17,919 - root - INFO - 點擊產品介紹 - 信用卡
+2025-03-19 17:28:18,549 - root - INFO - 點擊產品介紹 - 信用卡 - 卡片介紹
+2025-03-19 17:28:20,043 - root - INFO - 滾動到分頁物件
+2025-03-19 17:28:20,440 - root - INFO - 計數分頁子項目
+2025-03-19 17:28:20,464 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:21,083 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 1.png
+2025-03-19 17:28:21,282 - root - INFO - 截圖成功
+2025-03-19 17:28:21,282 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:21,908 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 2.png
+2025-03-19 17:28:22,119 - root - INFO - 截圖成功
+2025-03-19 17:28:22,119 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:22,749 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 3.png
+2025-03-19 17:28:22,964 - root - INFO - 截圖成功
+2025-03-19 17:28:22,965 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:23,582 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 4.png
+2025-03-19 17:28:23,790 - root - INFO - 截圖成功
+2025-03-19 17:28:23,790 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:24,419 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 5.png
+2025-03-19 17:28:24,611 - root - INFO - 截圖成功
+2025-03-19 17:28:24,611 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:25,270 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 6.png
+2025-03-19 17:28:25,460 - root - INFO - 截圖成功
+2025-03-19 17:28:25,461 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:26,082 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 7.png
+2025-03-19 17:28:26,288 - root - INFO - 截圖成功
+2025-03-19 17:28:26,288 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:26,898 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 8.png
+2025-03-19 17:28:27,102 - root - INFO - 截圖成功
+2025-03-19 17:28:27,102 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:27,715 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 9.png
+2025-03-19 17:28:27,936 - root - INFO - 截圖成功
+2025-03-19 17:28:27,936 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:28,548 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 10.png
+2025-03-19 17:28:28,734 - root - INFO - 截圖成功
+2025-03-19 17:28:28,734 - root - INFO - 點擊分頁子項目
+2025-03-19 17:28:29,348 - root - INFO - 截圖首頁 - C:\Users\User\Desktop\code\py\cathay\Auto_vendor_v1/pic/case3 - 11.png
+2025-03-19 17:28:29,525 - root - INFO - 截圖成功
+2025-03-19 17:28:29,525 - root - INFO - 所有(停發)信用卡數量為 11
+2025-03-19 17:28:29,526 - root - INFO - Case3 結束

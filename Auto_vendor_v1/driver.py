@@ -1,16 +1,18 @@
-import logging.config
 import time
-import os
 
+from log_package import Log
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.edge.options import Options as EdgeOptions
+from selenium.webdriver.edge.service import Service as EdgeService
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from selenium.webdriver.remote.webelement import WebElement
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 
@@ -20,41 +22,62 @@ class Driver(webdriver.Remote):
     def driver(self) -> webdriver.Remote:
         return self.__driver
 
-    def __init__(self):
+    def __init__(self, mobile, browser=None):
         """啟動瀏覽器，並設定為手機版模擬"""
-        option = Options()
-        # 設定模擬手機（iPhone 14）
-        mobile_emulation = {
-            "deviceMetrics": {
-                "width": 390,
-                "height": 844,
-                "pixelRatio": 3.0,
-            },  # iPhone 14 解析度
-            # "clientHints": {"platform": "macOS", "mobile": True},
-            "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/537.36",
-        }
-
-        # 設定模擬手機（Samsung 24）
-        # mobile_emulation = {
-        #     #
-        # }
-
-        option.add_experimental_option("mobileEmulation", mobile_emulation)
-        option.add_argument("--window-size=390,844")  # 瀏覽器大小
-        # 啟動 Chrome
-        self.__driver = webdriver.Chrome(
-            service=ChromeService(ChromeDriverManager().install()), options=option
-        )
-        self.__driver.switch_to.window(self.__driver.current_window_handle)
+        self.logger = Log().logger
+        match mobile:
+            # 設定模擬手機（iPhone 14）
+            case "IPhone":
+                mobile_emulation = {
+                    "deviceMetrics": {
+                        "device": "iPhone 14",
+                        "width": 390,
+                        "height": 844,
+                        "pixelRatio": 3,
+                    },
+                    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/99.0.4844.47 Mobile/15E148 Safari/604.1",
+                }
+            # 設定模擬手機（Samsung Galaxy S22 ULTRA）
+            case "Samsung":
+                mobile_emulation = {
+                    "deviceMetrics": {
+                        "device": "Samsung Galaxy S22 ULTRA - 2022",
+                        "width": 360,
+                        "height": 772,
+                        "dpr": 4,
+                        "user_agent": "-",
+                    },
+                    "userAgent": "Mozilla/5.0 (Linux; Android 12; SM-S908B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36",
+                }
+            case _:
+                self.logger.error("裝置選擇錯誤")
+        match browser:
+            case "Chrome":
+                # 啟動 Chrome
+                option = ChromeOptions()
+                option.add_experimental_option("mobileEmulation", mobile_emulation)
+                option.add_argument("--lang=zh-TW")  # 設定成繁體中文
+                self.__driver = webdriver.Chrome(
+                    service=ChromeService(ChromeDriverManager().install()),
+                    options=option,
+                )
+            case "Edge":
+                option = EdgeOptions()
+                option.add_experimental_option("mobileEmulation", mobile_emulation)
+                option.add_argument("--lang=zh-TW")  # 設定成繁體中文
+                self.__driver = webdriver.Edge(
+                    service=EdgeService(EdgeChromiumDriverManager().install()),
+                    options=option,
+                )
+            case _:
+                self.logger.error("瀏覽器選擇錯誤")
         self.actions = ActionChains(self.driver)
-        # 設定日誌
-        logging.config.fileConfig(os.path.dirname(__file__) + "/logging.conf")
-        self.logger = logging.getLogger()
         self.logger.info("driver 啟動成功")
 
     def get_url(self, url: str):
         """開啟網頁"""
         self.driver.get(url)
+        self.logger.info(f"前往 {url}")
 
     def wait_until_element(self, param, waitTime: float = 5) -> bool:
         """等待元素出現"""

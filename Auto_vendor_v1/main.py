@@ -1,6 +1,7 @@
-from case import *
+from case import AutoTest
+from parameter import *
 
 if __name__ == "__main__":
-    # AutoTest().exec_chrome_case1()
-    # AutoTest().exec_chrome_case2()
-    AutoTest().exec_chrome_case3()
+    AutoTest(IPhone, Chrome).exec_chrome_case1()
+    AutoTest(IPhone, Chrome).exec_chrome_case2()
+    AutoTest(IPhone, Chrome).exec_chrome_case3()

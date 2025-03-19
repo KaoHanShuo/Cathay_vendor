@@ -2,19 +2,6 @@ from driver import Driver
 from element import *
 
 
-class UnitAction(object):
-    """常規動作"""
-
-    def __init__(self, driver: Driver):
-        self.driver = driver
-        self.log = self.driver.logger
-
-    def goto_url(self, url: str):
-        """前往網址"""
-        self.log.info(self.goto_url.__doc__ + f"- {url}")
-        self.driver.driver.get(url)
-
-
 class UnitHomePage(object):
     """首頁操作"""
 
@@ -27,11 +14,6 @@ class UnitHomePage(object):
         """截圖首頁"""
         self.log.info(self.screen_shot_home.__doc__ + f" - {path}")
         self.driver.screen_shot(path)
-
-    # def get_homepage_open_account(self):
-    #     """取得首頁 - 開戶"""
-    #     self.element.homepage_open_account
-    #     self.log.info(self.get_homepage_open_account.__doc__)
 
     def click_hamburger_menu(self):
         """點擊左上功能列"""
@@ -73,8 +55,10 @@ class UnitSideMenuList(object):
         self.log.info(self.get_num_prod_introduce_card_list.__doc__)
         return len(list(self.element.prod_introduce_card_list_Child))
 
+
 class UnitCardIntroducePage(object):
     """卡片介紹頁面"""
+
     def __init__(self, driver: Driver, element: CardIntroducePage):
         self.driver = driver
         self.element = element
@@ -89,21 +73,22 @@ class UnitCardIntroducePage(object):
         """計數分頁子項目"""
         self.log.info(self.count_pagination_bullets.__doc__)
         return len(self.element.pagination_bullets)
-    def click_pagination_bullets(self, num:int):
+
+    def click_pagination_bullets(self, num: int):
         """點擊分頁子項目"""
         self.log.info(self.click_pagination_bullets.__doc__)
         self.driver.element_click(self.element.pagination_bullets[num])
+
+
 class Unit(object):
 
     def __init__(self, driver: Driver, element: Element):
         self.driver = driver
-        self.__unit_action = UnitAction(driver)
         self.__unit_homePage = UnitHomePage(driver, element.home_page)
         self.__unit_sideMenuList = UnitSideMenuList(driver, element.side_menu_list)
-        self.__unit_cardIntroducePage = UnitCardIntroducePage(driver, element.card_introduce_page)
-    @property
-    def unit_action(self):
-        return self.__unit_action
+        self.__unit_cardIntroducePage = UnitCardIntroducePage(
+            driver, element.card_introduce_page
+        )
 
     @property
     def unit_homePage(self):
@@ -112,8 +97,7 @@ class Unit(object):
     @property
     def unit_sideMenuList(self):
         return self.__unit_sideMenuList
-    
+
     @property
     def unit_cardIntroducePage(self):
         return self.__unit_cardIntroducePage
-

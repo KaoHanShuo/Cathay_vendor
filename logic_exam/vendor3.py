@@ -5,14 +5,21 @@
 # 輸入：n值(0-100)
 # 輸出：第幾順位
 
-def modify(num:int)->int:
-    people = list(range(1,num+1))
-    i=0
+
+def modify(num: int) -> int:
+    people = list(range(1, num + 1))
+    i = 0
     while len(people) > 1:
-        i = (i+2) % len(people)
+        i = (i + 2) % len(people)
         people.pop(i)
     return people[0]
 
-input = 100
-output = modify(input)
-print(output)
+
+try:
+    input = int(input(f"請輸入0 ~ 100的數字: "))
+    if input < 0 or input > 100:
+        raise
+    output = modify(input)
+    print(f"第 {output} 順位")
+except:
+    print("請重新輸入0 ~ 100的數字")
